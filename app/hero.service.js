@@ -9,16 +9,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var mock_heroes_1 = require('./mock-heroes');
+var http_1 = require('@angular/http');
+require('rxjs/add/operator/toPromise');
 var HeroService = (function () {
-    function HeroService() {
+    function HeroService(http) {
+        this.http = http;
     }
     HeroService.prototype.getHeroes = function () {
-        return new Promise(function (resolve, reject) {
-            setTimeout(function () {
-                return resolve(mock_heroes_1.HEROES);
-            }, 100);
-        });
+        return this.http.get("app/api.json").toPromise().then(function (response) { return response.json(); });
     };
     HeroService.prototype.getHero = function (id) {
         return this.getHeroes()
@@ -26,7 +24,7 @@ var HeroService = (function () {
     };
     HeroService = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [http_1.Http])
     ], HeroService);
     return HeroService;
 }());
