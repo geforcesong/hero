@@ -16,6 +16,7 @@ var DashboardComponent = (function () {
         this.heroService = heroService;
         this.router = router;
         this.heroes = [];
+        this.subtitle = '(v1)';
     }
     DashboardComponent.prototype.ngOnInit = function () {
         var _this = this;

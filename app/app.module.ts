@@ -9,7 +9,7 @@ import { HeroService } from './hero.service';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpModule } from '@angular/http';
 import { HighlightDirective } from '../directives/highlight.directive'
-
+import {TitleComponent} from './title.component'
 @NgModule({
   imports: [
     BrowserModule,
@@ -22,7 +22,8 @@ import { HighlightDirective } from '../directives/highlight.directive'
     DashboardComponent,
     HeroDetailComponent,
     HeroesComponent,
-    HighlightDirective
+    HighlightDirective,
+    TitleComponent
   ],
   providers: [HeroService],
   bootstrap: [AppComponent]
