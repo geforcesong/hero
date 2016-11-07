@@ -18,6 +18,7 @@ var heroes_component_1 = require('./heroes.component');
 var hero_service_1 = require('./hero.service');
 var app_routing_module_1 = require('./app-routing.module');
 var http_1 = require('@angular/http');
+var highlight_directive_1 = require('../directives/highlight.directive');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -33,7 +34,8 @@ var AppModule = (function () {
                 app_component_1.AppComponent,
                 dashboard_component_1.DashboardComponent,
                 hero_detail_component_1.HeroDetailComponent,
-                heroes_component_1.HeroesComponent
+                heroes_component_1.HeroesComponent,
+                highlight_directive_1.HighlightDirective
             ],
             providers: [hero_service_1.HeroService],
             bootstrap: [app_component_1.AppComponent]

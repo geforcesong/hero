@@ -31,6 +31,9 @@
         main: './main.js',
         defaultExtension: 'js'
       },
+      directives:{
+        defaultExtension: 'js'
+      },
       rxjs: {
         defaultExtension: 'js'
       },
