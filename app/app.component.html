@@ -1,4 +1,35 @@
 <h1>My Second Angular App</h1>
+<h2>{{evilTitle}}</h2>
 <br>
-<p [style.background]="'lime'">I am green with envy!</p>
-<h3>{{name||true=="George"?"ahah":"noo"}}</h3>
+<div>Here is hero list:</div>
+<br>
+<ul>
+    <li *ngFor="let hero of HEROES">
+        <hero-detail [CurrentHero]="hero"></hero-detail>
+    </li>
+    <li [ngClass]="classes">
+        <hero-detail></hero-detail>
+    </li>
+</ul>
+
+<button [disabled]="isUnchanged">Cancel is disabled</button>
+
+<br>
+<table border="1px">
+    <tr>
+        <td [style.color] = "isSpecial ? 'red': 'green'" (click)="onSave()">a</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td [attr.colspan]="1+1" on-click="onSave($event)">b:2</td>
+    </tr>
+</table>
+
+<div>
+    <button (click)="dec()" title="smaller" >-</button>
+    <button (click)="inc()" title="bigger">+</button>
+    <label [style.font-size.px]="size">FontSize: {{size}}px</label>
+  </div>
+
+
+  <input [value]="currentHero.firstName">
