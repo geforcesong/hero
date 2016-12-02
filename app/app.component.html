@@ -4,8 +4,8 @@
 <div>Here is hero list:</div>
 <br>
 <ul>
-    <li *ngFor="let hero of HEROES">
-        <hero-detail [CurrentHero]="hero"></hero-detail>
+    <li *ngFor="let hero of HEROES; let i=index">
+        <hero-detail [CurrentHero]="hero" [Index]="i+1"></hero-detail>
     </li>
     <li [ngClass]="classes">
         <hero-detail></hero-detail>

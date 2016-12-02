@@ -5,7 +5,7 @@ import { Hero } from './hero'
   selector: 'hero-detail',
   template: `
     <div *ngIf="CurrentHero">
-        <span class="badge">{{CurrentHero.id}}</span> {{CurrentHero.name}}
+        <span class="badge">{{Index}}-{{CurrentHero.id}}</span> {{CurrentHero.name}}
     </div>
     <div *ngIf="!CurrentHero">
         There is no hero being set.
@@ -15,4 +15,6 @@ import { Hero } from './hero'
 export class HeroDetailComponent {
     @Input()
     CurrentHero:Hero;
+    @Input()
+    Index: number;
 }

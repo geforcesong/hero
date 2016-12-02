@@ -17,10 +17,14 @@ var HeroDetailComponent = (function () {
         core_1.Input(), 
         __metadata('design:type', hero_1.Hero)
     ], HeroDetailComponent.prototype, "CurrentHero", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Number)
+    ], HeroDetailComponent.prototype, "Index", void 0);
     HeroDetailComponent = __decorate([
         core_1.Component({
             selector: 'hero-detail',
-            template: "\n    <div *ngIf=\"CurrentHero\">\n        <span class=\"badge\">{{CurrentHero.id}}</span> {{CurrentHero.name}}\n    </div>\n    <div *ngIf=\"!CurrentHero\">\n        There is no hero being set.\n    </div>\n  "
+            template: "\n    <div *ngIf=\"CurrentHero\">\n        <span class=\"badge\">{{Index}}-{{CurrentHero.id}}</span> {{CurrentHero.name}}\n    </div>\n    <div *ngIf=\"!CurrentHero\">\n        There is no hero being set.\n    </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], HeroDetailComponent);
